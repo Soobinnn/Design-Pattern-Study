@@ -1,4 +1,4 @@
-package AbstractFactory;
+package abstractFactory;
 
 public class ConcreteFactory2 implements AbstractFactory {
 

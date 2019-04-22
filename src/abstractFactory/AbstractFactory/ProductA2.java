@@ -1,4 +1,4 @@
-package AbstractFactory;
+package abstractFactory;
 
 public class ProductA2 implements ProductA {
 
