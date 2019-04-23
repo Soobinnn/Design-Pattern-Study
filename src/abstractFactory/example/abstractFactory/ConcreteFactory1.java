@@ -1,15 +1,12 @@
 package abstractFactory;
 
-public class ConcreteFactory2 implements AbstractFactory {
-
+public class ConcreteFactory1 implements AbstractFactory {
 	@Override
 	public ProductA createProductA() {
-		return new ProductA2();
+		return new ProductA1();
 	}
-
 	@Override
 	public ProductB createProductB() {
-		return new ProductB2();
+		return new ProductB1();
 	}
-
 }

@@ -1,4 +1,4 @@
-# 추상 팩토리 패턴(Abstract Factory Pattern)
+﻿# 추상 팩토리 패턴(Abstract Factory Pattern)
 
 ## 1. 작성자
 양동화
@@ -38,20 +38,20 @@
 
 
 ## 5. 장단점
-### 장점
+### 5.1. 장점
 - 확장에 매우 용이한 패턴으로 쉽게 다른 서브 클래스들을 확장할 수 있다.
 - 기존 팩토리 패턴의 if-else 로직에서 벗어날 수 있게 해준다.
 - 구체적인 클래스를 분리하여 제품군을 쉽게 대체할 수 있도록 한다.
 - 제품 사이의 일관성을 증진시킨다.
 
-### 단점
+### 5.2. 단점
 - 새로운 종류의 제품을 제공하기 힘들다.
    - 다양한 제품군은 제공할 수 있지만, 기존 제품에 새로운 기능을 추가하는 경우 모든 팩토리에 새로운 기능을 추가해야 하는 문제가 발생한다. 이는 재사용성을 해치는 단점으로 작용할 수 있다.
 
 
 ### 6. 구조와 코드 예제
 #### 6.1. 클래스 다이어그램
-![Class Diagram](https://ko.wikipedia.org/wiki/추상_팩토리_패턴#/media/File:Abstract_factory_UML.svg)
+![Class Diagram](./img/Abstract_factory_UML.svg)
 #### 6.2. 참여 객체
 - AbstractFactory: 개념적 제품에 대한 객체를 생성하는 오퍼레이션으로 인터페이스를 정의한다.
 - ConcreteFactory: 구체적인 제품에 대한 객체를 생성하는 오퍼레이션을 구성한다.
@@ -60,8 +60,113 @@
 - Client: AbstractFactory와 AbstractProduct 클래스에 선언된 인터페이스를 사용한다.
 
 ### 6.3. 코드 예제
-**6.1. 클래스 다이어그램**에 명시되어 있는 모델을 토대로 Java 코드를 작성해보았다. `ProductA1, ProductA2, ProductB1, ProductB2`는 **6.2. 참여 객체**에 명시된 대로 표현하기 위해 각각의 이름 앞에 `Concrete`를 붙여서 표현하였다.
-> 소스는 abstractFactory 패키지에 있다.
+**6.1. 클래스 다이어그램**에 명시되어 있는 모델을 참고하여 Java 코드를 작성해보았다. `ProductA1, ProductA2, ProductB1, ProductB2`는 **6.2. 참여 객체**에 명시된 대로 표현하기 위해 각각의 이름 앞에 `Concrete`를 붙여서 표현하였다.
+> 소스는 example/abstractFactory에 있다.
+
+ProductA와 ProductB를 생성하는 기능을 가진 Factory의 인터페이스를 정의하고, 아무런 기능도 넣진 않았지만 ProductA와 ProductB의 인터페이스도 정의한다.
+
+```java
+// ProductA와 ProductB를 생성하는 Factory 객체에 대한 인터페이스 정의
+public interface AbstractFactory {
+	public ProductA createProductA();
+	public ProductB createProductB();
+}
+```
+
+```java
+public interface ProductA {
+}
+```
+
+```java
+public interface ProductB {
+}
+```
+AbstractFactory의 기능을 확장한 ConcreteFactory1과 ConcreteFactory2를 작성하고, ProductA의 기능을 확장한 ProductA1, ProductA2와, ProductB의 기능을 확장한 ProductB1, ProductB2를 작성한다.  
+Factory1에서는 ProductA1과 ProductB1 객체를, Factory2에서는 ProductA2과 ProductB2 객체를 생성하도록 작성한다.
+
+```java
+public class ConcreteFactory1 implements AbstractFactory {
+	@Override
+	public ProductA createProductA() {
+		return new ProductA1();
+	}
+	@Override
+	public ProductB createProductB() {
+		return new ProductB1();
+	}
+}
+```
+
+```java
+public class ConcreteFactory2 implements AbstractFactory {
+	@Override
+	public ProductA createProductA() {
+		return new ProductA2();
+	}
+	@Override
+	public ProductB createProductB() {
+		return new ProductB2();
+	}
+}
+```
+
+```java
+public class ProductA1 implements ProductA {
+	public ProductA1() {
+		System.out.println("Product A1 is created");
+	}
+}
+```
+
+```java
+public class ProductA2 implements ProductA {
+	public ProductA2() {
+		System.out.println("Product A2 is created");
+	}
+}
+```
+
+```java
+public class ProductB1 implements ProductB {
+	public ProductB1() {
+		System.out.println("Product B1 is created");
+	}
+}
+```
+
+```java
+public class ProductB2 implements ProductB {
+	public ProductB2() {
+		System.out.println("Product B2 is created");
+	}
+}
+```
+
+테스트를 해볼 Client 클래스를 작성한다. 각각 Factory1과 Factory2 객체를 생성한 다음, 그 각각의 객체에서 Product가 의도한 대로 뽑히는지 확인해보자.
+
+```java
+public class Client {
+	public static void main(String[] args) {
+		AbstractFactory factory1 = new ConcreteFactory1();
+		factory1.createProductA();
+		factory1.createProductB();
+		
+		AbstractFactory factory2 = new ConcreteFactory2();
+		factory2.createProductA();
+		factory2.createProductB();
+	}
+}
+```
+
+출력 결과는 다음과 같다.
+
+```
+Product A1 is created
+Product B1 is created
+Product A2 is created
+Product B2 is created
+```
 
 
 ## 7. 참고자료
