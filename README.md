@@ -6,7 +6,7 @@ GOF의 디자인 패턴 책을 기반으로 함.
 ### 생성패턴
  - Abstract Factory
  - Builder
- - Factory Method
+ - Factory Method [이론](https://scorpio-mercury.tistory.com/18)
  - Prototype 
  - Singleton [이론](https://develop-im.tistory.com/45) 
 
