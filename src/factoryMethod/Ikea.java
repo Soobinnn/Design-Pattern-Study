@@ -1,6 +1,6 @@
 /*
- * ÇÊ¿äÇÑ °´Ã¼¸¦ IkeaFactory °´Ã¼·ÎºÎÅÍ ¹Ş¾Æ¿Í ¿øÇÏ´Â ±â´ÉÀ» ¼öÇàÇÑ´Ù.
- * IkeaFactory °´Ã¼ ÇÏ³ª¸¸ »ı¼ºÇÏ¸é µÇ±â ¶§¹®¿¡ È®Àå¼ºÀÌ³ª À¯Áöº¸¼ö ¸é¿¡¼­ ÁÁ´Ù.
+ * í•„ìš”í•œ ê°ì²´ë¥¼ IkeaFactory ê°ì²´ë¡œë¶€í„° ë°›ì•„ì™€ ì›í•˜ëŠ” ê¸°ëŠ¥ì„ ìˆ˜í–‰í•œë‹¤.
+ * IkeaFactory ê°ì²´ í•˜ë‚˜ë§Œ ìƒì„±í•˜ë©´ ë˜ê¸° ë•Œë¬¸ì— í™•ì¥ì„±ì´ë‚˜ ìœ ì§€ë³´ìˆ˜ ë©´ì—ì„œ ì¢‹ë‹¤.
  * 
  * */
 package factoryMethod;
@@ -11,14 +11,14 @@ public class Ikea {
 		
 		IkeaFactory ikeaFactory = new IkeaFactory();
 		
-		System.out.println("ÁÖ¹® 1: Ã¥»ó »ı¼º");
-		ikeaFactory.order("Ã¥»ó").make();
+		System.out.println("ì£¼ë¬¸ 1: ì±…ìƒ ìƒì„±");
+		ikeaFactory.order("ì±…ìƒ").make();
 		
-		System.out.println("ÁÖ¹® 2: ÀÇÀÚ »ı¼º");
-		ikeaFactory.order("ÀÇÀÚ").make();
+		System.out.println("ì£¼ë¬¸ 2: ì˜ì ìƒì„±");
+		ikeaFactory.order("ì˜ì").make();
 		
-		System.out.println("ÁÖ¹® 3: Ä§´ë µğÀÚÀÎ ¿¬±¸");
-		ikeaFactory.order("Ä§´ë").newDesign();
+		System.out.println("ì£¼ë¬¸ 3: ì¹¨ëŒ€ ë””ìì¸ ì—°êµ¬");
+		ikeaFactory.order("ì¹¨ëŒ€").newDesign();
 		
 	}
 

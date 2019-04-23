@@ -1,5 +1,5 @@
 /*
- * ½ÇÁúÀûÀÎ ±â´ÉÀ» ¼öÇàÇÏ´Â °´Ã¼
+ * ê¸°ëŠ¥ì„ ìˆ˜í–‰í•˜ëŠ” ê°ì²´
  * */
 
 package factoryMethod;
@@ -7,17 +7,17 @@ package factoryMethod;
 public class DeskMaker implements Furniture{
 
 	public DeskMaker() {
-		System.out.println("Ã¥»ó¸ŞÀÌÄ¿ »ï»ï´ë±â");
+		System.out.println("ì±…ìƒë©”ì´ì»¤ ì‚¼ì‚¼ëŒ€ê¸°");
 	}
 
 	@Override
 	public void make() {
-		System.out.println("Ã¥»óÀ» ¸¸µé¾ú½À´Ï´Ù.");
+		System.out.println("ì±…ìƒì„ ë§Œë“¤ì—ˆìŠµë‹ˆë‹¤.");
 	}
 	
 	@Override
 	public void newDesign() {
-		System.out.println("»õ·Î¿î Ã¥»ó µğÀÚÀÎÀ» ¿¬±¸ÇÕ´Ï´Ù.");
+		System.out.println("ìƒˆë¡œìš´ ì±…ìƒ ë””ìì¸ì„ ì—°êµ¬í•©ë‹ˆë‹¤.");
 		
 	}
 }

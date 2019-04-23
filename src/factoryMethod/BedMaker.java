@@ -1,5 +1,5 @@
 /*
- * ½ÇÁúÀûÀÎ ±â´ÉÀ» ¼öÇàÇÏ´Â °´Ã¼
+ * ê¸°ëŠ¥ì„ ìˆ˜í–‰í•˜ëŠ” ê°ì²´
  * */
 
 package factoryMethod;
@@ -7,17 +7,17 @@ package factoryMethod;
 public class BedMaker implements Furniture{
 
 	public BedMaker() {
-		System.out.println("Ä§´ë¸ŞÀÌÄ¿ »ï»ï´ë±â");
+		System.out.println("ì¹¨ëŒ€ë©”ì´ì»¤ ì‚¼ì‚¼ëŒ€ê¸°");
 	}
 
 	@Override
 	public void make() {
-		System.out.println("Ä§´ë¸¦ ¸¸µé¾ú½À´Ï´Ù.");
+		System.out.println("ì¹¨ëŒ€ë¥¼ ë§Œë“¤ì—ˆìŠµë‹ˆë‹¤.");
 	}
 
 	@Override
 	public void newDesign() {
-		System.out.println("»õ·Î¿î Ä§´ë µğÀÚÀÎÀ» ¿¬±¸ÇÕ´Ï´Ù.");
+		System.out.println("ìƒˆë¡œìš´ ì¹¨ëŒ€ ë””ìì¸ì„ ì—°êµ¬í•©ë‹ˆë‹¤.");
 		
 	}
 

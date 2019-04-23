@@ -1,6 +1,7 @@
+    
 /*
- * FurnitureÀÇ ÇÏÀ§ Å¬·¡½º °´Ã¼µéÀ» »ı¼ºÇÏ´Â ¿ªÇÒÀ» ¼öÇàÇÑ´Ù.
- * Ikea¿Í FurnitureÀ» ¿¬°áÇØÁÖ´Â Áß°£ÀÚ ¿ªÇÒ
+ * Furnitureì˜ í•˜ìœ„ í´ë˜ìŠ¤ ê°ì²´ë“¤ì„ ìƒì„±í•˜ëŠ” ì—­í• ì„ ìˆ˜í–‰í•œë‹¤.
+ * Ikeaì™€ Furnitureì„ ì—°ê²°í•´ì£¼ëŠ” ì¤‘ê°„ì ì—­í• 
  * 
  * */
 
@@ -10,9 +11,9 @@ public class IkeaFactory {
 	
 	public Furniture order(String type){
 		
-		if (type == "Ä§´ë") {return new BedMaker();}
-		if (type == "ÀÇÀÚ") {return new ChairMaker();}
-		if (type == "Ã¥»ó") {return new DeskMaker();}
+		if (type == "ì¹¨ëŒ€") {return new BedMaker();}
+		if (type == "ì˜ì") {return new ChairMaker();}
+		if (type == "ì±…ìƒ") {return new DeskMaker();}
 		
 		return null;
 		
