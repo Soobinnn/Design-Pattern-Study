@@ -3,7 +3,7 @@ package factoryMethod;
 public class ShrimpPizza implements Pizza{
 
 	public ShrimpPizza() {
-		System.out.println("쉬림프피자 주문 들어옴.");
+		System.out.println("쉬림프피자 주문하셨습니다.");
 	}
 
 	@Override
