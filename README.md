@@ -7,8 +7,8 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Abstract Factory
  - Builder
  - Factory Method
- - Prototype
- - Singleton
+ - Prototype 
+ - Singleton [개념 링크]:https://develop-im.tistory.com/45 
 
 ### 구조패턴
  - Adapter

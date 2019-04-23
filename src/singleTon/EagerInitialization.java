@@ -1,24 +1,24 @@
 package singleTon;
 /*
- * [¿¹Á¦1] °¡Àå ±âº»ÀûÀÎ SingleTon Pattern
- * private staticÀ» ÀÌ¿ëÇØ¼­ staticÀÌ ºÙÀº Å¬·¡½º º¯¼ö¸¦ ÀÎ½ºÅÏ½ºÈ­¿¡ »ó°ü¾øÀÌ »ç¿ë°¡´ÉÇÏ°ÔµÊ.
+ * [ì˜ˆì œ1] ê°€ì¥ ê¸°ë³¸ì ì¸ SingleTon Pattern
+ * private staticì„ ì´ìš©í•´ì„œ staticì´ ë¶™ì€ í´ë˜ìŠ¤ ë³€ìˆ˜ë¥¼ ì¸ìŠ¤í„´ìŠ¤í™”ì— ìƒê´€ì—†ì´ ì‚¬ìš©ê°€ëŠ¥í•˜ê²Œë¨.
  * 
- * 1. »ı¼ºÀÚ¸¦ private·Î ¸í½ÃÇÔ.
+ * 1. ìƒì„±ìë¥¼ privateë¡œ ëª…ì‹œí•¨.
  *  
- * EagerInitialization();À¸·Î ÀÎÇØ Å¬·¡½º°¡ load µÇ´Â ½ÃÁ¡¿¡ ÀÎ½ºÅÏ½º¸¦ »ı¼º½ÃÅ°´Âµ¥ ÀÌ¸¶Àúµµ ºÎ´ã½º·¯¿ï ¼ö°¡ ÀÖ´Ù. 
- * ¶ÇÇÑ ÀÌ ¼Ò½º´Â EagerInitialization Å¬·¡½º°¡ ÀÎ½ºÅÏ½ºÈ­ µÇ´Â ½ÃÁ¡¿¡ ¾î¶°ÇÑ ¿¡·¯Ã³¸®µµ ÇÒ ¼ö°¡ ¾ø´Ù.
+ * EagerInitialization();ìœ¼ë¡œ ì¸í•´ í´ë˜ìŠ¤ê°€ load ë˜ëŠ” ì‹œì ì— ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±ì‹œí‚¤ëŠ”ë° ì´ë§ˆì €ë„ ë¶€ë‹´ìŠ¤ëŸ¬ìš¸ ìˆ˜ê°€ ìˆë‹¤. 
+ * ë˜í•œ ì´ ì†ŒìŠ¤ëŠ” EagerInitialization í´ë˜ìŠ¤ê°€ ì¸ìŠ¤í„´ìŠ¤í™” ë˜ëŠ” ì‹œì ì— ì–´ë– í•œ ì—ëŸ¬ì²˜ë¦¬ë„ í•  ìˆ˜ê°€ ì—†ë‹¤.
  */
 public class EagerInitialization 
 {
-		// private static ·Î ¼±¾ğ.
+		// private static ë¡œ ì„ ì–¸.
 		private static EagerInitialization instance = new EagerInitialization();
 		
-		// »ı¼ºÀÚ
+		// ìƒì„±ì
 		private EagerInitialization () 
 		{
 			System.out.println( "call EagerInitialization constructor." );
 		}
-		// Á¶È¸ method
+		// ì¡°íšŒ method
 		public static EagerInitialization getInstance () 
 		{
 			return instance;

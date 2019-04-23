@@ -1,8 +1,8 @@
 package singleTon;
 /*
- * [¿¹Á¦2] static ÃÊ±âÈ­ ºí·°À» ÀÌ¿ëÇÑ sigleTon
- * ÃÊ±âÈ­ºí·°À» ÀÌ¿ëÇÏ¸é logicÀ» ´ãÀ» ¼ö ÀÖ±â ¶§¹®¿¡ º¹ÀâÇÑ ÃÊ±âº¯¼ö ¼¼ÆÃ, ¿¡·¯Ã³¸®¸¦ À§ÇÑ ±¸¹®À» ´ãÀ» ¼ö ÀÖÀ½.
- * [¿¹Á¦1]º¸´Ù ÁÁ¾Æº¸ÀÌÁö¸¸, ÀÎ½ºÅÏ½º°¡ »ç¿ëµÇ´Â ½ÃÁ¡¿¡ »ý¼ºµÇ´Â °ÍÀº ¾Æ´Ô.
+ * [ì˜ˆì œ2] static ì´ˆê¸°í™” ë¸”ëŸ­ì„ ì´ìš©í•œ sigleTon
+ * ì´ˆê¸°í™”ë¸”ëŸ­ì„ ì´ìš©í•˜ë©´ logicì„ ë‹´ì„ ìˆ˜ ìžˆê¸° ë•Œë¬¸ì— ë³µìž¡í•œ ì´ˆê¸°ë³€ìˆ˜ ì„¸íŒ…, ì—ëŸ¬ì²˜ë¦¬ë¥¼ ìœ„í•œ êµ¬ë¬¸ì„ ë‹´ì„ ìˆ˜ ìžˆìŒ.
+ * [ì˜ˆì œ1]ë³´ë‹¤ ì¢‹ì•„ë³´ì´ì§€ë§Œ, ì¸ìŠ¤í„´ìŠ¤ê°€ ì‚¬ìš©ë˜ëŠ” ì‹œì ì— ìƒì„±ë˜ëŠ” ê²ƒì€ ì•„ë‹˜.
  */
 public class StaticBlockInitalization 
 {

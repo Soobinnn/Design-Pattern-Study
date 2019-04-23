@@ -1,10 +1,10 @@
 package singleTon;
 /*
- * [¿¹Á¦3] Å¬·¡½ºÀÎ½ºÅÏ½º°¡ »ç¿ëµÇ´Â ½ÃÁ¡¿¡ ÀÎ½ºÅÏ½º¸¦ ¸¸µå´Â singleton pattern
- *  ÃÖÃÊ »ç¿ë½ÃÁ¡¿¡¸¸ ÀÎ½ºÅÏ½ºÈ­ ½ÃÅ°±â ¶§¹®¿¡ ÇÁ·Î±×·¥ÀÌ ¸Þ¸ð¸®¿¡ ÀûÀçµÇ´Â ½ÃÁ¡¿¡ ºÎ´ãÀÌ ¸¹ÀÌ ÁÙ°ÔµÊ.
- *  ÇÏÁö¸¸ ¹®Á¦´Â ³²¾ÆÀÖÀ½.
- *  MultiThread¹æ½ÄÀÌ¶ó¸é, singletonPatternÀº ¾ÈÀüÇÏÁö ¾ÊÀ½.
- *  Áï, µ¿ÀÏ ½ÃÁ¡¿¡ getInstance() method¸¦ È£ÃâÇÏ¸é ÀÎ½ºÅÏ½º°¡ µÎ¹ø »ý±æ À§ÇèÀÌ ÀÖÀ½. 
+ * [ì˜ˆì œ3] í´ëž˜ìŠ¤ì¸ìŠ¤í„´ìŠ¤ê°€ ì‚¬ìš©ë˜ëŠ” ì‹œì ì— ì¸ìŠ¤í„´ìŠ¤ë¥¼ ë§Œë“œëŠ” singleton pattern
+ *  ìµœì´ˆ ì‚¬ìš©ì‹œì ì—ë§Œ ì¸ìŠ¤í„´ìŠ¤í™” ì‹œí‚¤ê¸° ë•Œë¬¸ì— í”„ë¡œê·¸ëž¨ì´ ë©”ëª¨ë¦¬ì— ì ìž¬ë˜ëŠ” ì‹œì ì— ë¶€ë‹´ì´ ë§Žì´ ì¤„ê²Œë¨.
+ *  í•˜ì§€ë§Œ ë¬¸ì œëŠ” ë‚¨ì•„ìžˆìŒ.
+ *  MultiThreadë°©ì‹ì´ë¼ë©´, singletonPatternì€ ì•ˆì „í•˜ì§€ ì•ŠìŒ.
+ *  ì¦‰, ë™ì¼ ì‹œì ì— getInstance() methodë¥¼ í˜¸ì¶œí•˜ë©´ ì¸ìŠ¤í„´ìŠ¤ê°€ ë‘ë²ˆ ìƒê¸¸ ìœ„í—˜ì´ ìžˆìŒ. 
  */
 public class LazyInitialization 
 {
