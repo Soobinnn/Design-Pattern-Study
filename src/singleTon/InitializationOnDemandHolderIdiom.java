@@ -1,11 +1,11 @@
 package singleTon;
 
-/*[¿¹Á¦5] ±âÁ¸ ½Ì±ÛÅæ ÆÐÅÏÀÇ ¹®Á¦¸¦ ÇØ°áÇÏ±â À§ÇÑ »õ·Î¿î ½Ì±ÛÅæ ÆÐÅÏ
+/*[ì˜ˆì œ6] ê¸°ì¡´ ì‹±ê¸€í†¤ íŒ¨í„´ì˜ ë¬¸ì œë¥¼ í•´ê²°í•˜ê¸° ìœ„í•œ ìƒˆë¡œìš´ ì‹±ê¸€í†¤ íŒ¨í„´
 
-* jvmÀÇ class loaderÀÇ ¸ÅÄ¿´ÏÁò°ú classÀÇ load½ÃÁ¡À½ ÀÌ¿ëÇÏ¿© ³»ºÎ Å¬·¡½º¸¦ »ý¼º½ÃÅ´À¸·Î
-* thread°£ÀÇ µ¿±âÈ­¹®Á¦¸¦ ÇØ°áÇÔ.
-* lazy initializaitionÀÌ °¡´ÉÇÏ¸ç, ¸ðµç java¹öÀü°ú, jvm¿¡¼­ »ç¿ëÀÌ °¡´ÉÇÔ.
-* ÇöÀç java¿¡¼­ singletonÀ» »ý¼º½ÃÅ²´Ù°íÇÏ¸é °ÅÀÇ ¾Æ·¡ÀÇ ¹æ¹ýÀ» »ç¿ëÇÑ´Ù°í º¸¸éµÊ.
+* jvmì˜ class loaderì˜ ë§¤ì»¤ë‹ˆì¦˜ê³¼ classì˜ loadì‹œì ìŒ ì´ìš©í•˜ì—¬ ë‚´ë¶€ í´ëž˜ìŠ¤ë¥¼ ìƒì„±ì‹œí‚´ìœ¼ë¡œ
+* threadê°„ì˜ ë™ê¸°í™”ë¬¸ì œë¥¼ í•´ê²°í•¨.
+* lazy initializaitionì´ ê°€ëŠ¥í•˜ë©°, ëª¨ë“  javaë²„ì „ê³¼, jvmì—ì„œ ì‚¬ìš©ì´ ê°€ëŠ¥í•¨.
+* í˜„ìž¬ javaì—ì„œ singletonì„ ìƒì„±ì‹œí‚¨ë‹¤ê³ í•˜ë©´ ê±°ì˜ ì•„ëž˜ì˜ ë°©ë²•ì„ ì‚¬ìš©í•œë‹¤ê³  ë³´ë©´ë¨.
 * 
 */
 public class InitializationOnDemandHolderIdiom 

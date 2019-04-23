@@ -1,9 +1,9 @@
 package singleTon;
 /*
- * [¿¹Á¦4] ¸ÖÆ¼¾²·¹µå ¹®Á¦¸¦ ÇØ°áÇÏ±â À§ÇÑ µ¿±âÈ­ singleton ÆÐÅÏ
+ * [ì˜ˆì œ4] ë©€í‹°ì“°ë ˆë“œ ë¬¸ì œë¥¼ í•´ê²°í•˜ê¸° ìœ„í•œ ë™ê¸°í™” singleton íŒ¨í„´
  * 
- * synchronized¸¦ »ç¿ëÇÏ¿© ±¸ÇöÇØ¼­ threadµéÀÌ µ¿½Ã¿¡ Á¢±ÙÇØ¼­ ÀÎ½ºÅÏ½º¸¦ »ý¼º½ÃÅ°´Â À§ÇèÀº ¾ø¾îÁü
- *  ¼ö ¸¹Àº  threadµéÀÌ getInstance()¸Þ¼Òµå¸¦ È£ÃâÇÏ°ÔµÇ¸é ³ôÀº costºñ¿ëÀ¸·Î ÀÎÇØ ÇÁ·Î±×·¥Àü¹Ý¿¡ ¼º´ÉÀúÇÏ°¡ ÀÏ¾î³². 
+ * synchronizedë¥¼ ì‚¬ìš©í•˜ì—¬ êµ¬í˜„í•´ì„œ threadë“¤ì´ ë™ì‹œì— ì ‘ê·¼í•´ì„œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±ì‹œí‚¤ëŠ” ìœ„í—˜ì€ ì—†ì–´ì§
+ *  ìˆ˜ ë§Žì€  threadë“¤ì´ getInstance()ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ê²Œë˜ë©´ ë†’ì€ costë¹„ìš©ìœ¼ë¡œ ì¸í•´ í”„ë¡œê·¸ëž¨ì „ë°˜ì— ì„±ëŠ¥ì €í•˜ê°€ ì¼ì–´ë‚¨. 
  *  
  */
 public class ThreadSafeInitalization 
