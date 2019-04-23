@@ -11,4 +11,10 @@ public class BedMaker implements Furniture{
 		System.out.println("침대를 만들었습니다.");
 	}
 
+	@Override
+	public void newDesign() {
+		System.out.println("새로운 침대 디자인을 연구합니다.");
+		
+	}
+
 }
