@@ -1,3 +1,7 @@
+/*
+ * 실질적인 기능을 수행하는 객체
+ * */
+
 package factoryMethod;
 
 public class DeskMaker implements Furniture{
