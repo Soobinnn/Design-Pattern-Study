@@ -59,7 +59,7 @@
 - ConcreteProduct: 구체적으로 팩토리가 생성할 객체를 정의하고, AbstractProduct가 정의하고 있는 인터페이스를 구현한다.
 - Client: AbstractFactory와 AbstractProduct 클래스에 선언된 인터페이스를 사용한다.
 
-### 6.3. 코드 예제
+#### 6.3. 코드 예제
 **6.1. 클래스 다이어그램**에 명시되어 있는 모델을 참고하여 Java 코드를 작성해보았다. `ProductA1, ProductA2, ProductB1, ProductB2`는 **6.2. 참여 객체**에 명시된 대로 표현하기 위해 각각의 이름 앞에 `Concrete`를 붙여서 표현하였다.
 > 소스는 example/abstractFactory에 있다.
 
@@ -143,7 +143,7 @@ public class ProductB2 implements ProductB {
 }
 ```
 
-테스트를 해볼 Client 클래스를 작성한다. 각각 Factory1과 Factory2 객체를 생성한 다음, 그 각각의 객체에서 Product가 의도한 대로 뽑히는지 확인해보자.
+테스트를 해볼 Client 클래스를 작성한다. 각각 Factory1과 Factory2 객체를 생성한 다음, 그 각각의 객체에서 Product가 의도한 대로 생성되는지 확인해보자.
 
 ```java
 public class Client {
@@ -159,7 +159,7 @@ public class Client {
 }
 ```
 
-출력 결과는 다음과 같다.
+출력 결과는 다음과 같다. Factory1에서는 ProductA1와 ProductB1이 생성되고, Factory2에서는 ProductA2와 ProductB2가 생성됨을 확인할 수 있다.
 
 ```
 Product A1 is created
