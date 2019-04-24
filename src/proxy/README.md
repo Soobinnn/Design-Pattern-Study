@@ -17,18 +17,19 @@ _구조 패턴_ 중 하나로, 동일하거나 유사한 객체들 사이에 가
 
 
 ## 3. 왜 사용하는가?
+후술할 사용되는 방법과 **4.1. 장점** 부분을 읽어보자.
 ### 3.1. 사용되는 방법
-- 1. Protection Proxy
-> 주체 클래스에 대한 접근을 제어하기 위한 경우이다. 프록시 클래스에서 클라이언트가 주체 클래스에 대한 접근의 허용 여부를 결정하도록 할 수 있다.
+#### 3.1.1. Protection Proxy
+주체 클래스에 대한 접근을 제어하기 위한 경우이다. 프록시 클래스에서 클라이언트가 주체 클래스에 대한 접근의 허용 여부를 결정하도록 할 수 있다.
+#### 3.1.2. Virtual Proxy
+생성 자원이 많이 드는 작업을 처리할 경우이다. 프록시 클래스에서 자잘한 작업들을 처리하고 리소스가 많이 요구되는 작업들이 필요할 때에만 주체 클래스를 사용하도록 구현할 수 있다.
+#### 3.1.3. Remote Proxy
+프록시 클래스는 로컬에 두고, 주체 클래스는 원격으로 존재하는 경우이다. (ex) Google Docs)
+#### 3.1.4. Smart Proxy
+객체가 액세스할 때 추가적인 동작을 제공한다.
 
-- 2. Virtual Proxy
-> 생성 자원이 많이 드는 작업을 처리할 경우이다. 프록시 클래스에서 자잘한 작업들을 처리하고 리소스가 많이 요구되는 작업들이 필요할 때에만 주체 클래스를 사용하도록 구현할 수 있다.
-
-- 3. Remote Proxy
-- 프록시 클래스는 로컬에 두고, 주체 클래스는 원격으로 존재하는 경우이다. (ex) Google Docs)
-
-- 사용 예시
-> ex) [참조 횟수 계산 방식](https://ko.wikipedia.org/wiki/%EC%B0%B8%EC%A1%B0_%ED%9A%9F%EC%88%98_%EA%B3%84%EC%82%B0_%EB%B0%A9%EC%8B%9D), Spring AOP
+#### 3.1.5. 사용 예시
+[참조 횟수 계산 방식](https://ko.wikipedia.org/wiki/%EC%B0%B8%EC%A1%B0_%ED%9A%9F%EC%88%98_%EA%B3%84%EC%82%B0_%EB%B0%A9%EC%8B%9D), [Spring AOP](https://github.com/gracefulife/DesignPattern/tree/master/src/kr/pe/gracefulife/proxy)
 
 ### 3.2. 각 언어에서의 사용 예시
 - Java, C, C#에서는 객체에 대한 인터페이스를 생성하고, 프록시와 실제 주체를 이 인터페이스를 확장하여 구현한 뒤, 프록시를 이용하여 동작을 대리 수행한다.
@@ -40,6 +41,7 @@ _구조 패턴_ 중 하나로, 동일하거나 유사한 객체들 사이에 가
 - 사이즈가 큰 객체가 로딩되기 전에도 proxy를 통해 참조할 수 있다.(반응성, 성능 향상 효과)
 - 실제 객체의 메소드를 숨기고 인터페이스를 통해 노출시킬 수 있어 안전성이 있다.
 - 로컬에 있지 않고 떨어져 있는 객체를 사용할 수 있다.
+- 원본 객체의 접근에 대해 사전 처리를 할 수 있다.
 
 ### 4.2. 단점
 - 객체 생성 시 한 단계를 더 거치게 되므로, 빈번한 객체 생성이 필요한 경우 성능이 저하될 수 있다.
@@ -50,10 +52,157 @@ _구조 패턴_ 중 하나로, 동일하거나 유사한 객체들 사이에 가
 ![UML_Proxy](./img/Proxy_pattern_diagram.svg)
 
 #### 5.2. 참여 객체
--
+- Subject: 객체의 기능을 정의하는 인터페이스 형태로 구현하여, Proxy와 RealSubject가 이 Subject의 기능을 확장하도록 한다.
+- RealSubject: 실제 객체의 기능을 구현한다.
+- Proxy: RealSubject의 대표자 객체를 생성하여, 이 대표자 객체를 이용하여 RealSubject의 기능을 수행시킨다.
+- Client: Subject에 명시되어 있는 기능들을 요청한다.
 
 #### 5.3. 코드 예제
--
+소스는 `example/proxy`에 있다.
+간단한 은행 업무 서비스 예제를 만들어보았다. 기능은 계좌 조회(inquery), 입금(deposit), 출금(withdrawal)이 있다. BankService라는 인터페이스를 정의하여 앞서 말한 세 가지 기능을 정의한 뒤, BankServiceImpl에서 핵심 기능을 작성하고, BankServiceProxy에서는 대리자 객체 bankServiceImpl를 만들어 정의해 둔 기능을 시키면서, 추가적인 기능도 구현해 보았다.  
+서비스의 인터페이스는 다음과 같다.
+
+```java
+public interface BankService {
+	public int inquery();
+	public int deposit(int money);
+	public int withdrawal(int money) throws Exception;
+}
+```
+
+진짜 객체인 BankServiceImpl과 대표자 객체를 생성하여 동작을 수행시킬 proxy인 BankServiceProxy를 작성하였다. 앞서 작성한 인터페이스를 implements했기 때문에 정의해둔 기능을 전부 구현해야 한다.
+
+```java
+public class BankServiceImpl implements BankService {
+	private String username;
+	private int balance;
+
+	public BankServiceImpl(String username) {
+		this.username = username;
+		this.balance = 0;
+	}
+
+	// 계좌 조회
+	@Override
+	public int inquery() {
+		return balance;
+	}
+	// 입금
+	@Override
+	public int deposit(int money) {
+		balance += money;
+		return balance;
+	}
+	// 출금. 실패 시 Exception을 던지도록 하였다.
+	@Override
+	public int withdrawal(int money) throws Exception {
+		if(balance < money) {
+			throw new Exception("Not enough balance");
+		}
+		balance -= money;
+		return balance;
+	}
+}
+```
+
+```java
+public class BankServiceProxy implements BankService {
+	// BankService를 실질적으로 수행할 대리자(대표자) 객체
+	private BankServiceImpl bankServiceImpl;
+	
+	public BankServiceProxy(String username) {
+		bankServiceImpl = new BankServiceImpl(username);
+	}
+
+	/*
+	 * BankServiceImpl에서 구현한 기능은 대리자 객체를 통해 수행시키도록 하였고,
+	 * 각 메소드가 동작할 때 상태 메시지를 콘솔에 출력시키는 기능을 추가하였다.
+	 */
+	@Override
+	public int inquery() {
+		int balance = bankServiceImpl.inquery();
+		System.out.println("* Inquery Success *\n> " + balance);
+		return balance;
+	}
+	@Override
+	public int deposit(int money) {
+		int balance = bankServiceImpl.deposit(money);
+		System.out.println("* Deposit Success *\n> " + balance);
+		return balance;
+	}
+	@Override
+	public int withdrawal(int money) {
+		try {
+			int balance = bankServiceImpl.withdrawal(money);
+			System.out.println("* Withdrawal Success *\n> " + balance);
+		} catch (Exception e) {
+			System.out.println("* Withdrawal Failure *\n> " + bankServiceImpl.inquery());
+		}
+		return bankServiceImpl.inquery();
+	}
+}
+```
+
+이들을 실행해 볼 Client 클래스를 작성한다. 사용자는 단순히 서비스를 호출하여 인터페이스에 정의되어 있는 기능들을 수행할 수 있다.
+
+```java
+public class Client {
+
+	public static void main(String[] args) throws Exception {
+		Scanner command = new Scanner(System.in);
+
+		System.out.print("S I M P L E   B A N K   S E R V I C E\nI(nquery), D(eposit), W(ithdrawal), Q(uit) \n> Enter your name: ");
+		BankService bankService = new BankServiceProxy(command.nextLine());
+		
+		while(true) {
+			System.out.print("> ");
+			String argument1 = command.nextLine();
+			if(argument1.equalsIgnoreCase("I")) {
+				bankService.inquery();
+			} else if(argument1.equalsIgnoreCase("D")) {
+				System.out.print("How much? ");
+				bankService.deposit(command.nextInt());
+				command.nextLine();
+			} else if(argument1.equalsIgnoreCase("W")) {
+				System.out.print("How much? ");
+				bankService.withdrawal(command.nextInt());
+				command.nextLine();
+			} else if(argument1.equalsIgnoreCase("Q")) {
+				System.out.println("Service Terminated");
+				break;
+			} else {
+				System.out.println("Wrong Command");
+			}
+		}
+	}
+}
+```
+
+실행 결과는 다음과 같다.
+
+```
+S I M P L E   B A N K   S E R V I C E
+I(nquery), D(eposit), W(ithdrawal), Q(uit)
+> Enter your name: User
+> i
+* Inquery Success *
+> 0
+> d
+How much? 5000
+* Deposit Success *
+> 5000
+> w
+How much? 200
+* Withdrawal Success *
+> 4800
+> w
+How much? 5000
+* Withdrawal Failure *
+> 4800
+> q
+Service Terminated
+
+```
 
 
 ## 6. 참고자료
@@ -62,6 +211,7 @@ _구조 패턴_ 중 하나로, 동일하거나 유사한 객체들 사이에 가
 - [[Design_Pattern] 프록시 패턴(Proxy Pattern)](https://limkydev.tistory.com/79)
 - [java proxy pattern (프록시 패턴)](https://blog.seotory.com/post/2017/09/java-proxy-pattern)
 - [Proxy 패턴, 그리고 Dynamic Proxy API](http://wiki.sys4u.co.kr/pages/viewpage.action?pageId=7766156)
-- [자바 Proxy Pattern(프록시 패턴) 이란)(https://m.blog.naver.com/gracefulife/220650929598)
+- [자바 Proxy Pattern(프록시 패턴) 이란](https://m.blog.naver.com/gracefulife/220650929598)
 - [프록시 패턴(Proxy Pattern) - 자바 디자인 패턴과 JDK 예제](http://blog.naver.com/PostView.nhn?blogId=2feelus&logNo=220655183083&redirect=Dlog&widgetTypeCall=true)
 - [디자인패턴 - 프록시 패턴](https://yaboong.github.io/design-pattern/2018/10/17/proxy-pattern/)
+- [Proxy Design Pattern](https://sourcemaking.com/design_patterns/proxy)
