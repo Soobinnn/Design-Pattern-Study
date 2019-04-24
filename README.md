@@ -4,10 +4,10 @@ Cafe24 디자인패턴 스터디 문서임
 GOF의 디자인 패턴 책을 기반으로 함.
 
 ### 생성패턴
- - Abstract Factory
- - Builder
+ - Abstract Factory [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/abstractFactory/README.md)
+ - Builder [이론](http://naver.me/xaFu59WW)
  - Factory Method [이론](https://scorpio-mercury.tistory.com/18)
- - Prototype 
+ - Prototype [이론](https://blog.naver.com/new_jae_guk/221521427632)
  - Singleton [이론](https://develop-im.tistory.com/45) 
 
 ### 구조패턴
