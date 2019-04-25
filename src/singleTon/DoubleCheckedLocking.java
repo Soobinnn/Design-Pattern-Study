@@ -6,6 +6,7 @@ package singleTon;
  *  if문에서 다시 한번 체크할 때 동기화 시켜서 인스턴스를 생성하므로 thread-safe하면서도 처음 생성 이후에
  *  synchonized블럭을 타지 않기 때문에 성능저하를 완화했다
  *  완벽한 방법은 아님.
+ *  * volatile를 선언한 것을 쓰레드가 바로 읽을 경우, 쓰기 직전에 모든 변수를 스레드가 볼수 있다.
  * */
 public class DoubleCheckedLocking 
 {
