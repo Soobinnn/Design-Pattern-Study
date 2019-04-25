@@ -1,7 +1,6 @@
 package singleTon;
 
 /*[예제6] 기존 싱글톤 패턴의 문제를 해결하기 위한 새로운 싱글톤 패턴
-
 * jvm의 class loader의 매커니즘과 class의 load시점음 이용하여 내부 클래스를 생성시킴으로
 * thread간의 동기화문제를 해결함.
 * lazy initializaition이 가능하며, 모든 java버전과, jvm에서 사용이 가능함.
