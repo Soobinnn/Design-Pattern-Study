@@ -82,7 +82,7 @@ public interface ProductA {
 public interface ProductB {
 }
 ```
-AbstractFactory의 기능을 확장한 ConcreteFactory1과 ConcreteFactory2를 작성하고, ProductA의 기능을 확장한 ProductA1, ProductA2와, ProductB의 기능을 확장한 ProductB1, ProductB2를 작성한다.  
+AbstractFactory에서 정의해 둔 기능을 구현한 ConcreteFactory1과 ConcreteFactory2를 작성하고, ProductA에서 정의해 둔 기능을 구현한 ProductA1, ProductA2와, ProductB에서 정의해 둔 기능을 구현한 ProductB1, ProductB2를 작성한다.  
 Factory1에서는 ProductA1과 ProductB1 객체를, Factory2에서는 ProductA2과 ProductB2 객체를 생성하도록 작성한다.
 
 ```java
