@@ -17,7 +17,7 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Decorator
  - Facade
  - Flyweight
- - Proxy
+ - Proxy [이동](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/proxy/README.md)
 
 ### 행위패턴
  - Chain of Responsibility
