@@ -14,10 +14,10 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Adapter
  - Bridge
  - Composite
- - Decorator
+ - Decorator [이론](https://scorpio-mercury.tistory.com/19)
  - Facade
  - Flyweight
- - Proxy
+ - Proxy [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/proxy/README.md)
 
 ### 행위패턴
  - Chain of Responsibility
@@ -29,5 +29,5 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Observer
  - State
  - Stratege
- - Template Method
+ - Template Method [이론](https://scorpio-mercury.tistory.com/20)
  - Visitor

@@ -46,11 +46,11 @@ AOP란 관점 지향 프로그래밍으로 기능을 **핵심 비즈니스 기�
 
 ## 해결방안 - 설계를 구성하는 요소간의 관계(클래스다이어그램)
 ### 클래스다이어그램
-![UML_Proxy](./img/Proxy_pattern_diagram.svg)
+![UML_Proxy](./img/W3sDesign_Memento_Design_Pattern_UML.jpg)
 
 ### 참여 객체
-- Subject: 객체의 기능을 정의하는 인터페이스 형태로 구현하여, Proxy와 RealSubject가 이 Subject의 기능을 확장하도록 한다. 이 존재로 인해, Client는 Proxy의 역할과 RealSubject의 역할의 차이를 의식할 필요가 없다.
-- RealSubject: 실제 객체의 기능을 구현한다. RealSubject는 Proxy의 존재를 모른다.
+- Subject: 객체의 기능을 정의하는 인터페이스 형태로 구현하여, Proxy와 RealSubject가 이 Subject의 기능을 확장하도록 한다.
+- RealSubject: 실제 객체의 기능을 구현한다.
 - Proxy: RealSubject의 대표자 객체를 생성하여, 이 대표자 객체를 이용하여 RealSubject의 기능을 수행시킨다.
 - Client: Subject에 명시되어 있는 기능들을 요청한다.
 
@@ -69,7 +69,7 @@ AOP란 관점 지향 프로그래밍으로 기능을 **핵심 비즈니스 기�
 
 ## 코드 예제
 소스는 `example/proxy`에 있다.
-간단한 은행 업무 서비스 예제를 만들어보았다. 기능은 계좌 조회(inquery), 입금(deposit), 출금(withdrawal)이 있다. BankService라는 인터페이스를 정의하여 앞서 말한 세 가지 기능을 정의한 뒤, BankServiceImpl에서 핵심 기능을 작성하고, BankServiceProxy에서는 대리자 객체 bankServiceImpl를 만들어 정의해 둔 기능을 시키도록 하였다.  
+간단한 은행 업무 서비스 예제를 만들어보았다. 기능은 계좌 조회(inquery), 입금(deposit), 출금(withdrawal)이 있다. BankService라는 인터페이스를 정의하여 앞서 말한 세 가지 기능을 정의한 뒤, BankServiceImpl에서 핵심 기능을 작성하고, BankServiceProxy에서는 대리자 객체 bankServiceImpl를 만들어 정의해 둔 기능을 시키면서, BankService에서 throw한 Exception을 상황에 맞게 처리하는 추가적인 기능도 구현해 보았다.  
 서비스의 인터페이스는 다음과 같다.
 
 ```java
@@ -119,40 +119,36 @@ public class BankServiceImpl implements BankService {
 public class BankServiceProxy implements BankService {
 	// BankService를 실질적으로 수행할 대리자(대표자) 객체
 	private BankServiceImpl bankServiceImpl;
-	private int balance;
 	
 	public BankServiceProxy(String username) {
 		bankServiceImpl = new BankServiceImpl(username);
-		balance = bankServiceImpl.inquery();
 	}
 
 	/*
 	 * BankServiceImpl에서 구현한 기능은 대리자 객체를 통해 수행시키도록 하였고,
 	 * 각 메소드가 동작할 때 상태 메시지를 콘솔에 출력시키는 기능을 추가하였다.
-	 * 
-	 * Proxy의 역할은 Client 역할의 요구를 할 수 있는 만큼 처리하고,
-	 * 만약 자신만으로 처리할 수 없으면 RealSubject에게 처리를 맡긴다.
 	 */
 	@Override
 	public int inquery() {
+		int balance = bankServiceImpl.inquery();
 		System.out.println("* Inquery Success *\n> " + balance);
 		return balance;
 	}
 	@Override
 	public int deposit(int money) {
-		balance = bankServiceImpl.deposit(money);
+		int balance = bankServiceImpl.deposit(money);
 		System.out.println("* Deposit Success *\n> " + balance);
 		return balance;
 	}
 	@Override
 	public int withdrawal(int money) {
 		try {
-			balance = bankServiceImpl.withdrawal(money);
+			int balance = bankServiceImpl.withdrawal(money);
 			System.out.println("* Withdrawal Success *\n> " + balance);
 		} catch (Exception e) {
-			System.out.println("* Withdrawal Failure *\n> " + balance);
+			System.out.println("* Withdrawal Failure *\n> " + bankServiceImpl.inquery());
 		}
-		return balance;
+		return bankServiceImpl.inquery();
 	}
 }
 ```
@@ -231,5 +227,3 @@ Service Terminated
 - [Proxy Design Pattern](https://sourcemaking.com/design_patterns/proxy)
 - [[Design pattern] Proxy](https://alleysark.tistory.com/190)
 - [Spring AOP 스프링이 해줄건데 너가 왜 어려워 해? Spring boot에서 aop logging 사용법 제일 쉽게 알려드립니다!](https://jeong-pro.tistory.com/171)
-- [[DesignPattern] 프록시 패턴](https://devbox.tistory.com/entry/DesignPattern-%ED%94%84%EB%A1%9D%EC%8B%9C-%ED%8C%A8%ED%84%B4)
-
