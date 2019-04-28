@@ -29,5 +29,5 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Observer
  - State
  - Stratege
- - Template Method
+ - Template Method [이론](https://scorpio-mercury.tistory.com/20)
  - Visitor
