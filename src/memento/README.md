@@ -46,7 +46,7 @@ AOP란 관점 지향 프로그래밍으로 기능을 **핵심 비즈니스 기�
 
 ## 해결방안 - 설계를 구성하는 요소간의 관계(클래스다이어그램)
 ### 클래스다이어그램
-![UML_Proxy](./img/Proxy_pattern_diagram.svg)
+![UML_Proxy](./img/W3sDesign_Memento_Design_Pattern_UML.jpg)
 
 ### 참여 객체
 - Subject: 객체의 기능을 정의하는 인터페이스 형태로 구현하여, Proxy와 RealSubject가 이 Subject의 기능을 확장하도록 한다.
