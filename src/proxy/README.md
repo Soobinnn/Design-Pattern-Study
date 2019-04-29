@@ -27,7 +27,7 @@
 #### 3. Remote Proxy
 프록시 클래스는 로컬에 두고, 주체 클래스는 원격으로 존재하는 경우이다. (ex) Google Docs)  
 네트워크 개념의 프록시는 remote proxy 모델에 가깝다.
-#### 4. Smart Proxy
+#### 4. Smart Reference
 객체가 액세스할 때 추가적인 동작을 제공한다.  
 C++와 같은 낮은 수준의 언어에 대해서 원시 포인터에 대한 안전한 관리를 위해 스마트 포인터를 두고, 실제 주소공간에 대해 이 스마트 포인터를 통해 접근하도록 할 때 smart reference proxy를 사용한다.
 
@@ -232,4 +232,4 @@ Service Terminated
 - [[Design pattern] Proxy](https://alleysark.tistory.com/190)
 - [Spring AOP 스프링이 해줄건데 너가 왜 어려워 해? Spring boot에서 aop logging 사용법 제일 쉽게 알려드립니다!](https://jeong-pro.tistory.com/171)
 - [[DesignPattern] 프록시 패턴](https://devbox.tistory.com/entry/DesignPattern-%ED%94%84%EB%A1%9D%EC%8B%9C-%ED%8C%A8%ED%84%B4)
-
+- GoF의 디자인 패턴
