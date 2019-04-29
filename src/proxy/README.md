@@ -135,24 +135,27 @@ public class BankServiceProxy implements BankService {
 	 */
 	@Override
 	public int inquery() {
-		System.out.println("* Inquery Success *\n> " + balance);
+		printStatus("Inquery", true);
 		return balance;
 	}
 	@Override
 	public int deposit(int money) {
 		balance = bankServiceImpl.deposit(money);
-		System.out.println("* Deposit Success *\n> " + balance);
+		printStatus("Deposit", true);
 		return balance;
 	}
 	@Override
 	public int withdrawal(int money) {
 		try {
 			balance = bankServiceImpl.withdrawal(money);
-			System.out.println("* Withdrawal Success *\n> " + balance);
+			printStatus("Withdrawal", true);
 		} catch (Exception e) {
-			System.out.println("* Withdrawal Failure *\n> " + balance);
+			printStatus("Withdrawal", false);
 		}
 		return balance;
+	}
+	public void printStatus(String status, boolean success) {
+		System.out.printf("* %s %s *\n> %d\n", status, success ? "Success" : "Faliure", balance);
 	}
 }
 ```
