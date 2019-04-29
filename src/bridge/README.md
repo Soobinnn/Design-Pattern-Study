@@ -253,7 +253,9 @@ public abstract void count_display(int repeat_num);
 
 ## 해결방안 - 설계를 구성하는 요소간의 관계 (클래스다이어그램)
 
-![](.\img\BridgePattern2.png)
+![](./img/BridgePattern2.png)
+
+
 
 
 
