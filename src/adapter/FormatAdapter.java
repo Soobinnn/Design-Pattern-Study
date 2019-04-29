@@ -1,5 +1,7 @@
 package adapter;
 
+
+//Adapter
 public class FormatAdapter implements MediaPlayer
 {
 	private MediaPackage media;
