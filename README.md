@@ -11,7 +11,7 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Singleton [이론](https://develop-im.tistory.com/45) 
 
 ### 구조패턴
- - Adapter
+ - Adapter [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/adapter/Adapter.md)
  - Bridge
  - Composite
  - Decorator [이론](https://scorpio-mercury.tistory.com/19)
@@ -29,5 +29,5 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Observer
  - State
  - Stratege
- - Template Method
+ - Template Method [이론](https://scorpio-mercury.tistory.com/20)
  - Visitor
