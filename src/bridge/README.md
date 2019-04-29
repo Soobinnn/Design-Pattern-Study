@@ -253,7 +253,9 @@ public abstract void count_display(int repeat_num);
 
 ## 해결방안 - 설계를 구성하는 요소간의 관계 (클래스다이어그램)
 
-![](C:\Users\USER\Desktop\Study\study_designpattern\브리지 패턴.png)
+![./img/BridgePattern2.png](.\img\BridgePattern2.png)
+
+
 
  위 클래스 다이어그램은 기본적인 브리지패턴의 클래스 다이어 그램이다. 
 
@@ -267,7 +269,9 @@ public abstract void count_display(int repeat_num);
 
 예제코드를 기반으로 한 클래스 다이어그램은 다음과 같다.
 
-![](C:\Users\USER\Desktop\Study\study_designpattern\BridgePattern.jpg)
+![](./img/BridgePattern.jpg)
+
+  
 
 <b>Display :</b> Abstraction
 
