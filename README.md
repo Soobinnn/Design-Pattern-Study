@@ -12,7 +12,7 @@ GOF의 디자인 패턴 책을 기반으로 함.
 
 ### 구조패턴
  - Adapter [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/adapter/Adapter.md)
- - Bridge
+ - Bridge [이론](<https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/bridge/README.md>)
  - Composite [이론](https://blog.naver.com/new_jae_guk/221525577141)
  - Decorator [이론](https://scorpio-mercury.tistory.com/19)
  - Facade
