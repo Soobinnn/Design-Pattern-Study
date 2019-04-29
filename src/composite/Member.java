@@ -1,4 +1,4 @@
-package compositePattern;
+package composite;
 
 public class Member extends Social{
 	private String name;
