@@ -2,7 +2,7 @@ package command;
 
 /*
  * 플레이어 동작
- * 슈팅 게임에 대한 활동(상하좌우 이동, 미사일 발사(누르고 있으면 On / 떼면 Off), 현재 위치 확인)을 할 수 있다.
+ * 슈팅 게임에 대한 활동(상하좌우 이동, 미사일 발사(On/Off), 현재 위치 확인)을 할 수 있다.
  * 활동 반경은 가로 100(0~99), 세로 200(0~199)이라고 하자. 
  */
 public class PlayerReceiver {
@@ -41,8 +41,8 @@ public class PlayerReceiver {
 		System.out.printf("현재 %s 님의 위치는 (%d, %d)입니다.\n", nickname, positionX, positionY);
 	}
 	
-	// 공격
-	public void shotPress() {
+	// 미사일 자동 발사 지정
+	public void shotToggle() {
 		if(!isShot) {
 			System.out.println("미사일을 자동으로 발사합니다.");
 			isShot = true;

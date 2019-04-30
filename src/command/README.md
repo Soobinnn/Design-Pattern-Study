@@ -18,7 +18,7 @@
 
 ### 활용
 - Java의 API 중 `java.lang.Runnable`과 `javax.swing.Action`가 커맨드 패턴을 사용하고 있다.
-- [여러 사용 예시](https://en.wikipedia.org/wiki/Command_pattern#Uses)가 있는데, 그 중에서 두 가지의 예만 후술하겠다.
+- [여러 사용 예시](https://en.wikipedia.org/wiki/Command_pattern#Uses)가 있는데, 여기서는 세 가지의 예만 후술하겠다.
 - Networking: 게임에서의 플레이어 동작과 같은, 전체적인 커맨드를 서로 다른 기계에서 실행될 네트워크를 통해 전체 명령 객체를 보낼 수 있다.
 - Wizard: 어플리케이션 코드로부터 UI 코드를 분리해내는 자연스러운 방법은 명령 객체를 사용하여 wizard를 구현하는 것이다. 명령 객체는 wizard의 처음으로 보여질 때 생성된다. 각 wizard의 페이지는 명령 객체에 의한 GUI 변경 사항을 저장하므로, 사용자가 진행함에 따라 명령 개체가 채워진다. "Finish" 버튼은 단순히 execute()를 호출하는 것이다. 이렇게 하면, 명령 클래스는 작동하게 될 것이다.
 - 작업 큐: 명령 리스트를 작업 큐에 저장 후 스레드는 큐로부터 명령을 하나씩 받아 각 work의 execute()만 수행하면 된다.
@@ -72,27 +72,27 @@ public interface Command {
 ```java
 /*
  * 플레이어 동작
- * 슈팅 게임에 대한 활동(상하좌우 이동, 미사일 발사(누르고 있으면 On / 떼면 Off), 현재 위치 확인)을 할 수 있다.
- * 활동 반경은 가로 100(0~99), 세로 200(0~199)이라고 하자.
+ * 슈팅 게임에 대한 활동(상하좌우 이동, 미사일 발사(On/Off), 현재 위치 확인)을 할 수 있다.
+ * 활동 반경은 가로 100(0~99), 세로 200(0~199)이라고 하자. 
  */
 public class PlayerReceiver {
 	private String nickname;
 	private int positionX;
 	private int positionY;
 	private boolean isShot;
-
+	
 	public PlayerReceiver(String nickname) {
-		this.nickname = nickname;
+		this.nickname = nickname;  
 		positionX = 50;
 		positionY = 10;
 		isShot = false;
 	}
-
+	
 	// 닉네임 변경
 	public void changeNickname(String nickname) {
 		this.nickname = nickname;
 	}
-
+	
 	// 상하좌우 이동
 	public void moveUp() {
 		positionY = (positionY < 200) ? positionY + 1 : 200;
@@ -110,9 +110,9 @@ public class PlayerReceiver {
 	public void printPosition() {
 		System.out.printf("현재 %s 님의 위치는 (%d, %d)입니다.\n", nickname, positionX, positionY);
 	}
-
-	// 공격
-	public void shotPress() {
+	
+	// 미사일 자동 발사 지정
+	public void shotToggle() {
 		if(!isShot) {
 			System.out.println("미사일을 자동으로 발사합니다.");
 			isShot = true;
@@ -121,7 +121,7 @@ public class PlayerReceiver {
 			isShot = false;
 		}
 	}
-
+	
 }
 ```
 
@@ -223,16 +223,16 @@ class PrintPositionCommand implements Command {
 
 }
 
-class ShotPressCommand implements Command {
+class ShotToggleCommand implements Command {
 	private PlayerReceiver player;
 	
-	public ShotPressCommand(PlayerReceiver player) {
+	public ShotToggleCommand(PlayerReceiver player) {
 		this.player = player;
 	}
 	
 	@Override
 	public void execute() {
-		player.shotPress();
+		player.shotToggle();
 	}
 	
 	public String toString() {
@@ -257,6 +257,7 @@ public class PlayerInvoker {
 ```
 
 사용자의 입력에 따라 Command를 발동시키는 Client이다.
+(i: 위로 이동 / k: 아래로 이동 / j: 좌로 이동 / l: 우로 이동 / a: 미사일 자동발사 OnOff / p: 현재 위치 출력 / q: 종료)
 
 ```java
 import java.util.Scanner;

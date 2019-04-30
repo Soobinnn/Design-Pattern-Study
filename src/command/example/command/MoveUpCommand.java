@@ -94,16 +94,16 @@ class PrintPositionCommand implements Command {
 
 }
 
-class ShotPressCommand implements Command {
+class ShotToggleCommand implements Command {
 	private PlayerReceiver player;
 	
-	public ShotPressCommand(PlayerReceiver player) {
+	public ShotToggleCommand(PlayerReceiver player) {
 		this.player = player;
 	}
 	
 	@Override
 	public void execute() {
-		player.shotPress();
+		player.shotToggle();
 	}
 	
 	public String toString() {

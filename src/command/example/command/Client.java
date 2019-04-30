@@ -32,7 +32,7 @@ public class Client {
 				playerInvoker.sendCommand(new MoveRightCommand(player));
 				break;
 			case 'a':
-				playerInvoker.sendCommand(new ShotPressCommand(player));
+				playerInvoker.sendCommand(new ShotToggleCommand(player));
 				break;
 			case 'p':
 				playerInvoker.sendCommand(new PrintPositionCommand(player));
