@@ -21,7 +21,7 @@ GOF의 디자인 패턴 책을 기반으로 함.
 
 ### 행위패턴
  - Chain of Responsibility
- - Command
+ - Command [이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/command/README.md)
  - Interpreter
  - Iterator
  - Mediator
