@@ -28,6 +28,6 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Memento
  - Observer
  - State
- - Stratege
+ - Strategy [이론](https://scorpio-mercury.tistory.com/21)
  - Template Method [이론](https://scorpio-mercury.tistory.com/20)
  - Visitor
