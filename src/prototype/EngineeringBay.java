@@ -1,4 +1,4 @@
-package prototypePattern;
+package prototype;
 
 public class EngineeringBay implements Building {
 

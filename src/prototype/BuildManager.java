@@ -1,4 +1,4 @@
-package prototypePattern;
+package prototype;
 
 import java.util.HashMap;
 
