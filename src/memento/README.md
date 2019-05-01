@@ -36,14 +36,12 @@
 
 
 ## 코드 예제
-소스는 `example/proxy`에 있다.
-간단한 은행 업무 서비스 예제를 만들어보았다. 기능은 계좌 조회(inquery), 입금(deposit), 출금(withdrawal)이 있다. BankService라는 인터페이스를 정의하여 앞서 말한 세 가지 기능을 정의한 뒤, BankServiceImpl에서 핵심 기능을 작성하고, BankServiceProxy에서는 대리자 객체 bankServiceImpl를 만들어 정의해 둔 기능을 시키면서, BankService에서 throw한 Exception을 상황에 맞게 처리하는 추가적인 기능도 구현해 보았다.  
-서비스의 인터페이스는 다음과 같다.
+
 
 ```java
 ```
 
-진짜 객체인 BankServiceImpl과 대표자 객체를 생성하여 동작을 수행시킬 proxy인 BankServiceProxy를 작성하였다. 앞서 작성한 인터페이스를 implements했기 때문에 정의해둔 기능을 전부 구현해야 한다.
+
 
 ```java
 ```
@@ -63,3 +61,4 @@
 ### 참고문헌
 - GoF의 디자인 패턴
 - [위키백과 - 메멘토 패턴](https://ko.wikipedia.org/wiki/%EB%A9%94%EB%A9%98%ED%86%A0_%ED%8C%A8%ED%84%B4)
+- [PHP Memento Design Pattern Part I: Wide & Narrow Interfaces](http://www.php5dp.com/php-memento-design-pattern-part-i-wide-narrow-interfaces/)
