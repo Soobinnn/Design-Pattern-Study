@@ -22,7 +22,7 @@ GOF의 디자인 패턴 책을 기반으로 함.
 ### 행위패턴
  - Chain of Responsibility
  - Command [이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/command/README.md)
- - Interpreter
+ - Interpreter [이론](https://blog.naver.com/new_jae_guk/221528121772)
  - Iterator
  - Mediator [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/mediator/Mediator.md)
  - Memento [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/memento/README.md)
