@@ -1,5 +1,4 @@
 
-
 # 중재자 패턴 (Mediator pattern)
 ### 작성자
  임수빈

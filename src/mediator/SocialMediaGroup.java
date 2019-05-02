@@ -1,4 +1,4 @@
-package Mediator;
+package mediator;
 
 //예제2
 // Mediator 
