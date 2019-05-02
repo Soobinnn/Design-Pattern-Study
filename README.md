@@ -25,7 +25,7 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Interpreter
  - Iterator
  - Mediator
- - Memento
+ - Memento [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/memento/README.md)
  - Observer
  - State[이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/state)
  - Strategy [이론](https://scorpio-mercury.tistory.com/21)
