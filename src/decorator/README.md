@@ -13,6 +13,7 @@
 Decorator는 글자 그대로 장식가로서, 중심이 되는 객체가 반환하는 값에 추가적으로 더해져서 결과값을 반환한다.
 <br/>
 - 쉽게 생각하기 위해서 스타벅스의 커스터마이징 음료를 생각해보자.
+<br/>
 나같은 경우는 그린 티 크림 프라푸치노(Green Tea Cream Frappuccino)를 주문해서 에스프레소 샷 추가, 저지방 우유, 라이트 시럽, 휘핑크림, 자바칩 갈아 만든 **커스터마이징** 음료를 산다.
 
 * 이와 같이 **하나의 객체에 옵션들을 여러 개를 추가**해서 만드는 패턴을 장식하는 것과 같다하여 데코레이터 패턴이라 한다.
@@ -90,12 +91,19 @@ Decorator는 글자 그대로 장식가로서, 중심이 되는 객체가 반환
 - 중심이 되는 객체를 수정하지 않고 동적으로 추가 또는 삭제 가능
 <br/>
 - 확장에는 열려있고 변경에는 닫혀 있다.
+
 <br/>
+
 - 상위 클래스에 많은 기능이 누적되는 상황을 피할 수 있다.
+
 <br/>
+
 ### - 단점
+
 - 자잘한 객체가 많이 추가되어 객체들을 모두 이해하고 수정하는 과정이 복잡해진다.
+
 <br/>
+
 ## 코드 예제
 
 스타벅스에서 그린티 크림 프라푸치노에 샷추가, 저지방 우유, 자바칩을 추가했을 때 가격을 리턴하는 코드를 작성해보았다.
@@ -103,6 +111,8 @@ Decorator는 글자 그대로 장식가로서, 중심이 되는 객체가 반환
 ![decoImg1](./img/deco1.jpg)
 
 스타벅스 메뉴에는 그린티 크림 프라푸치노와 부가메뉴인 커피데코레이터가 들어있다.
+
+<br/>
 
 ```java
 public interface StarbucksMenu {
@@ -131,8 +141,12 @@ public abstract class CoffeeDecorator implements StarbucksMenu{
 
 }
 ```
+
 <br/>
+
 추상클래스인 커피데코레이터의 구현은 하위클래스인 자바칩, 저지방우유, 에스프레소샷에 구현된다.
+
+<br/>
 
 ```java
 public class EspressoShot extends CoffeeDecorator{
@@ -181,8 +195,12 @@ public class LowFatMilk extends CoffeeDecorator{
 	}
 }
 ```
+
 <br/>
+
 고객이 다음과 같이 주문을 하면 기본 메뉴를 먼저 생성한 후 기본 메뉴에 추가메뉴를 더해 총 가격을 구할 수 있다.
+
+<br/>
 
 ```java
 public class Customer {
@@ -196,8 +214,12 @@ public class Customer {
 	}
 }
 ```
+
 <br/>
+
 결과창은 다음과 같다.
+
+<br/>
 
 ![decoImg4](./img/deco4.png)
 

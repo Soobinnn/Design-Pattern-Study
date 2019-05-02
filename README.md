@@ -14,7 +14,7 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Adapter [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/adapter/Adapter.md)
  - Bridge [이론](<https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/bridge/README.md>)
  - Composite [이론](https://blog.naver.com/new_jae_guk/221525577141)
- - Decorator [이론](https://scorpio-mercury.tistory.com/19)
+ - Decorator [이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/decorator)
  - Facade
  - Flyweight
  - Proxy [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/proxy/README.md)
