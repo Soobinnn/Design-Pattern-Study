@@ -1,7 +1,7 @@
 package Mediator;
 
 
-//예제1
+//예제2
 public class SocialMediaGroupTest 
 {
 	public static void main(String[] args) 
@@ -21,6 +21,5 @@ public class SocialMediaGroupTest
 		mediator.addSubscriber(subscriber4);
 		
 		subscriber1.send("Learn Design Patterns.");
-		
 	}
 }

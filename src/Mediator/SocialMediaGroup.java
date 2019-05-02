@@ -1,6 +1,6 @@
 package Mediator;
 
-//예제1
+//예제2
 // Mediator 
 public interface SocialMediaGroup 
 {

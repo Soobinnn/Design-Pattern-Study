@@ -2,7 +2,7 @@ package Mediator;
 
 import java.util.Date;
 
-//예제2
+//예제-1
 //Mediator
 public class ChatRoom 
 {

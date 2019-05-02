@@ -1,6 +1,6 @@
 package Mediator;
 
-//예제1
+//예제2
 public class SubscriberImpl extends Subscriber
 {
 	public SubscriberImpl(SocialMediaGroup med, String name) 

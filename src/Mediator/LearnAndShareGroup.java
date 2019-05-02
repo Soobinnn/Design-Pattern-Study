@@ -3,7 +3,7 @@ package Mediator;
 import java.util.ArrayList;
 import java.util.List;
 
-//예제1
+//예제2
 //ConcreteMediator
 public class LearnAndShareGroup implements SocialMediaGroup
 {

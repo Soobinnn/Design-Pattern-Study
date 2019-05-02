@@ -1,6 +1,6 @@
 package Mediator;
 
-//예제2
+//예제-1
 //Colleague
 public class User 
 {
