@@ -18,7 +18,7 @@
 
 ## 해결방안 - 설계를 구성하는 요소간의 관계(클래스다이어그램)
 ### 클래스다이어그램
-![UML_memento](./img/W3sDesign_Memento_Design_Pattern_UML)
+![UML_memento](./img/MementoSmall.jpg)
 
 ![memento_interactionDiagram](./img/InterationDiagram.png)
 
