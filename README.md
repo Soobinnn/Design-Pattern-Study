@@ -16,7 +16,7 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Composite [이론](https://blog.naver.com/new_jae_guk/221525577141)
  - Decorator [이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/decorator)
  - Facade
- - Flyweight
+ - Flyweight[이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/flyweight)
  - Proxy [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/proxy/README.md)
 
 ### 행위패턴
@@ -27,7 +27,7 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Mediator
  - Memento
  - Observer
- - State
+ - State[이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/state)
  - Strategy [이론](https://scorpio-mercury.tistory.com/21)
  - Template Method [이론](https://scorpio-mercury.tistory.com/20)
  - Visitor
