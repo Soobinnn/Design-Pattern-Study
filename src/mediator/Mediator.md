@@ -23,9 +23,10 @@
 __* 완전히 제거 할수는 없다__
  
 ## 문제 - 언제 패턴을 사용하는가?
-![Mediator Pattern](./img/Mediator_Design_Pattern_2.jpg)
 프로그램을 작성하다보면, 상호작용을 해야하는 경우,
 객체들 간의 결합도가 증가하고 유연성이 떨어짐.
+
+![Mediator Pattern](./img/Mediator_Design_Pattern_2.jpg)
 
 서로 명령을 주고 받을 수 있는 형식이 있다고 했을 떄,
 서로 명령을 주고 받는 부분을 중재하는 형식을 정의하게됨. 
