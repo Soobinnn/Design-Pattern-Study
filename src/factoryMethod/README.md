@@ -33,10 +33,10 @@
 ## 해결방안 - 설계를 구성하는 요소간의 관계 (클래스다이어그램)
 ![factoryMethodImg1](./img/fm1.jpg)
 
-* Creator: Product에서 객체를 받아오는 팩토리 역할을 한다.
-* Creator1: 실질적인 행위를 하는 객체
+* Creator: Product에서 객체를 받아오는 상위 클래스
+* Creator1: 실제 생성하는 팩토리
 * Product: 객체들을 하나로 통합하는 인터페이스
-* Product1: Creator1이 생성한 인스턴스
+* Product1: Creator1에서 생성되는 객체
 
 
 
