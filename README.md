@@ -24,7 +24,7 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Command [이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/command/README.md)
  - Interpreter
  - Iterator
- - Mediator
+ - Mediator [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/mediator/Mediator.md)
  - Memento [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/memento/README.md)
  - Observer
  - State[이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/state)
