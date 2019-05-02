@@ -30,7 +30,7 @@
 
 ## 해결방안 - 설계를 구성하는 요소간의 관계(클래스다이어그램)
 ### 클래스다이어그램
-![UML_Proxy](./img/Command_Design_Pattern_Class_Diagram.png)
+![UML_Command](./img/Command_Design_Pattern_Class_Diagram.png)
 
 ### 참여자
 - Command(명령): 연산 수행에 필요한 인터페이스를 선언한다. (execute())
