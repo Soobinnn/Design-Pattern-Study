@@ -27,13 +27,7 @@ GOF의 디자인 패턴 책을 기반으로 함.
  - Mediator [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/mediator/Mediator.md)
  - Memento [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/memento/README.md)
  - Observer
-<<<<<<< HEAD
- - State [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/state/README.md)
- - Strategy [이론](https://scorpio-mercury.tistory.com/21)
- - Template Method [이론](https://scorpio-mercury.tistory.com/20)
-=======
- - State[이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/state)
+ - State[이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/state/README.md)
  - Strategy [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/strategy/README.md)
  - Template Method [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/templateMethod/README.md)
->>>>>>> a85cf829277979737444801400be6b259600c9d1
  - Visitor
