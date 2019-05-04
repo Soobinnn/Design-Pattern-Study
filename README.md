@@ -1,8 +1,13 @@
 # Design-Pattern-Study
-Cafe24 디자인패턴 스터디 문서임
-
-GOF의 디자인 패턴 책을 기반으로 함.
-
+## Cafe24 디자인패턴 스터디 문서
+## 기간 : 19.04.22 ~ 19.05.03 (2주)
+## 인원 : 임수빈, 남기웅, 양동화, 유재국, 추연훈 (5명)
+## 교재 : GOF의 디자인 패턴 책을 기반으로 함.
+## Study Role
+ - 발표 방식
+   디자인 패턴 큰 카테고리 (생성패턴, 구조패턴, 행위패턴) 별 패턴 1개씩 발표 
+   2일 공부 후 1일 세미나식으로 진행
+   
 ### 생성패턴
  - Abstract Factory [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/abstractFactory/README.md)
  - Builder [이론](http://naver.me/xaFu59WW)
