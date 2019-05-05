@@ -24,7 +24,7 @@
   객체와 클래스들에 대한 설명
   
 ## 디자인 패턴 카탈로그
-![Design-Pattern Diagram](./img/designpattern1.PNG)
+![Design-Pattern Diagram](./src/img/designpattern1.PNG)
 ### 목적 (Purpose)
 
 __- 생성__
@@ -85,7 +85,7 @@ __- 객체__
  - Visitor -- 클래스의 변경 없이 객체에 적용할 수 있는 연산
 
 ### 디자인 패턴 관계도
-![Design-Pattern Relation](./img/designpattern2.PNG)
+![Design-Pattern Relation](./src/img/designpattern2.PNG)
 
 * 복합체(Composite)는 반복자(Iterator), 방문자(Visitor)를 함께 사용해야할 때가 많음.
 * 원형(Prototype)  은 추상 팩토리 패턴(Abstract Factory)의 대안 패턴
