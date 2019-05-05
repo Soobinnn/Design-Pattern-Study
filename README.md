@@ -25,19 +25,6 @@
   
 ## 디자인 패턴 카탈로그
 ![Design-Pattern Diagram](./src/img/designpattern1.PNG)
-### 목적 (Purpose)
-
-__- 생성__
-
-: 객체의 생성 과정에 관여하는 것
-
- __- 구조__
-
-: 클래스, 객체의 합성에 관한 패턴
-
-- 행동
-
-: 클래스, 객체들이 상호작용하는 방법과 책임을 분산하는 방법 정의
 
 ### 범위 (Scope)
 
@@ -51,10 +38,22 @@ __- 클래스__
 __- 객체__
 
 : 객체 관련성(런타임에 변경가능, 동적)을 다루는 패턴
-
 	- 생성 객체 : 객체를 생성하는 책임을 다른 객체에게 위임함.
 	- 구조 객체 : 객체를 합성하는 방법을 정의함.
 	- 행동 객체 : 하나의 작업을 수행하기 위해 객체 집합이 어떻게 협력하는지 기술함.
+
+### 목적 (Purpose)
+
+__- 생성__
+
+: 객체의 생성 과정에 관여하는 것
+ __- 구조__
+
+: 클래스, 객체의 합성에 관한 패턴
+__- 행동__
+
+: 클래스, 객체들이 상호작용하는 방법과 책임을 분산하는 방법 정의
+
 ### 생성패턴
  - Abstract Factory -- 제품 객체군 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/abstractFactory/README.md)
  - Builder -- 복합 객체 생성 방법  [이론](http://naver.me/xaFu59WW)
@@ -67,7 +66,7 @@ __- 객체__
  - Bridge -- 객체 구현 [이론](<https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/bridge/README.md>)
  - Composite -- 객체의 합성과 구조 [이론](https://blog.naver.com/new_jae_guk/221525577141)
  - Decorator -- 서브클래싱 없이 객체의 책임성 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/decorator/README.md)
- - Facade -- 서브시스템에 대한 인터페이스
+ - Facade -- 서브시스템에 대한 인터페이스 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/facade/facade.md)
  - Flyweight -- 객체의 저장 비용 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/flyweight/README.md)
  - Proxy -- 객체 접근 방법 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/proxy/README.md)
 
@@ -78,7 +77,7 @@ __- 객체__
  - Iterator -- 집합 객체 요소들의 접근 방법 및 순회 방법
  - Mediator -- 어떤 객체들이 어떻게 상호작용하는지 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/mediator/Mediator.md)
  - Memento -- 언제 어떤 정보를 객체의 외부에 저장하는지 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/memento/README.md)
- - Observer -- 다른 객체에 종속적인 객체 수. 종속적인 객체들의 상태 변경 방법
+ - Observer -- 다른 객체에 종속적인 객체 수. 종속적인 객체들의 상태 변경 방법 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/observer/observer.md)
  - State -- 객체의 상태 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/state/README.md)
  - Strategy -- 알고리즘 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/strategy/README.md)
  - Template Method -- 알고리즘의 단계 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/templateMethod/README.md)
