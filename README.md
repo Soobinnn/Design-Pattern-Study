@@ -64,13 +64,13 @@ __- 행동__
  - Abstract Factory -- 제품 객체군 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/abstractFactory/README.md)
  - Builder -- 복합 객체 생성 방법  [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/builder/README.md)
  - Factory Method -- 인스턴스화될 객체의 서브클래스 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/factoryMethod/README.md)
- - Prototype -- 인스턴스화될 객체 클래스 [이론](https://blog.naver.com/new_jae_guk/221521427632)
+ - Prototype -- 인스턴스화될 객체 클래스 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/prototype/README.md)
  - Singleton -- 클래스의 인스턴스가 하나일 때 [이론](https://develop-im.tistory.com/45) 
 
 ### 구조패턴
  - Adapter -- 객체에 대한 인터페이스 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/adapter/Adapter.md)
  - Bridge -- 객체 구현 [이론](<https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/bridge/README.md>)
- - Composite -- 객체의 합성과 구조 [이론](https://blog.naver.com/new_jae_guk/221525577141)
+ - Composite -- 객체의 합성과 구조 [이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/composite/README.md)
  - Decorator -- 서브클래싱 없이 객체의 책임성 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/decorator/README.md)
  - Facade -- 서브시스템에 대한 인터페이스 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/facade/facade.md)
  - Flyweight -- 객체의 저장 비용 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/flyweight/README.md)
@@ -79,7 +79,7 @@ __- 행동__
 ### 행위패턴
  - Chain of Responsibility -- 요청을 처리하는 객체 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/chainOfResponsibility/README.md)
  - Command -- 요청의 처리시점과 처리 방법 [이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/command/README.md)
- - Interpreter -- 언어의 문법과 해석 방법 [이론](https://blog.naver.com/new_jae_guk/221528121772)
+ - Interpreter -- 언어의 문법과 해석 방법 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/interpreter/README.md)
  - Iterator -- 집합 객체 요소들의 접근 방법 및 순회 방법 [이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/iterator/README.md)
  - Mediator -- 어떤 객체들이 어떻게 상호작용하는지 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/mediator/Mediator.md)
  - Memento -- 언제 어떤 정보를 객체의 외부에 저장하는지 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/memento/README.md)
