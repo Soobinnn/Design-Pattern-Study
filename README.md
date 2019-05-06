@@ -80,7 +80,7 @@ __- 행동__
  - Chain of Responsibility -- 요청을 처리하는 객체 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/chainOfResponsibility/README.md)
  - Command -- 요청의 처리시점과 처리 방법 [이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/command/README.md)
  - Interpreter -- 언어의 문법과 해석 방법 [이론](https://blog.naver.com/new_jae_guk/221528121772)
- - Iterator -- 집합 객체 요소들의 접근 방법 및 순회 방법
+ - Iterator -- 집합 객체 요소들의 접근 방법 및 순회 방법 [이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/iterator/README.md)
  - Mediator -- 어떤 객체들이 어떻게 상호작용하는지 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/mediator/Mediator.md)
  - Memento -- 언제 어떤 정보를 객체의 외부에 저장하는지 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/memento/README.md)
  - Observer -- 다른 객체에 종속적인 객체 수. 종속적인 객체들의 상태 변경 방법 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/observer/observer.md)
