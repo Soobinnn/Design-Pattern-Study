@@ -1,6 +1,7 @@
 # 책임 사슬 패턴 (Chain of Responsibility pattern)
 ### 작성자
 * 추연훈
+
 > https://scorpio-mercury.tistory.com/22
 
 ## 책임 사슬 패턴(Chain of Responsibility pattern)이란?
@@ -12,7 +13,7 @@
 <br/>
 
 
-> 그렇다면 이 팩토리 메서드 패턴을 왜 사용해야 할까?
+> 그렇다면 이 책임 사슬 패턴을 왜 사용해야 할까?
 
 
 <br/>
