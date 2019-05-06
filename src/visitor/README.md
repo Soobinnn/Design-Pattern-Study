@@ -1,6 +1,6 @@
 # 비지터 패턴 (Visitor pattern)
 
-####유재국
+#### 유재국
 
 ## 비지터 패턴(Visitor pattern)이란?
 
