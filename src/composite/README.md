@@ -145,8 +145,6 @@ public class Main {
 
 ### 참고문헌
 
-<b>예제 참고</b>
-
 [https://kimsunzun.tistory.com/entry/Composite%EB%B3%B5%ED%95%A9%EC%B2%B4-%ED%8C%A8%ED%84%B4]
 
 [https://jdm.kr/blog/228]
