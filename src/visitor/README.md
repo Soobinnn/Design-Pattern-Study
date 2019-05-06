@@ -96,7 +96,7 @@ interface CarElementVisitor {
     void visit(Body body);
     void visit(Car car);
 }
-//CarElementVisitor 인터페이스는 어떤 데이터에 visit 할 것인지 정의
+// CarElementVisitor 인터페이스는 어떤 데이터에 visit 할 것인지 정의
 
 class CarElementPrintVisitor implements CarElementVisitor {
     public void visit(Wheel wheel) {
