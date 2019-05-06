@@ -87,7 +87,7 @@ __- 행동__
  - State -- 객체의 상태 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/state/README.md)
  - Strategy -- 알고리즘 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/strategy/README.md)
  - Template Method -- 알고리즘의 단계 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/templateMethod/README.md)
- - Visitor -- 클래스의 변경 없이 객체에 적용할 수 있는 연산
+ - Visitor -- 클래스의 변경 없이 객체에 적용할 수 있는 연산 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/visitor/README.md)
 
 ### 디자인 패턴 관계도
 ![Design-Pattern Relation](./src/img/designpattern2.PNG)
