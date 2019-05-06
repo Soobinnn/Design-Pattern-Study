@@ -172,8 +172,6 @@ public class Main {
 
 ### 참고문헌
 
-<b>예제 참고</b>
-
 [https://blog.naver.com/gamediz/20041448546]
 
 [https://blog.naver.com/sorkelf/40170789000]
