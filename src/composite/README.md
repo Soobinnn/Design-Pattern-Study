@@ -38,7 +38,7 @@
 public abstract class Social {
 	public abstract String getName();
 }
-//Social 추상 클래스는 String 자료형을 리턴해주는 getName 추상 함수를 지니고 있다.
+// Social 추상 클래스는 String 자료형을 리턴해주는 getName 추상 함수를 지니고 있다.
 
 
 public class Member extends Social{
@@ -52,7 +52,7 @@ public class Member extends Social{
 		return name;
 	}
 }
-//Member 클래스는 Social을 상속 받아 getName기능만하며, getName 함수를 자신의 클래스 변수인 name을 반환해주도록 재정의하였다.
+// Member 클래스는 Social을 상속 받아 getName기능만하며, getName 함수를 자신의 클래스 변수인 name을 반환해주도록 재정의하였다.
 
 
 public class Company extends Social{
