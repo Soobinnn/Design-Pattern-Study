@@ -77,7 +77,7 @@ __- 행동__
  - Proxy -- 객체 접근 방법 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/proxy/README.md)
 
 ### 행위패턴
- - Chain of Responsibility -- 요청을 처리하는 객체[이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/chainOfResponsibility/README.md)
+ - Chain of Responsibility -- 요청을 처리하는 객체 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/chainOfResponsibility/README.md)
  - Command -- 요청의 처리시점과 처리 방법 [이론](https://github.com/Soobinnn/Design-Pattern-Study/tree/master/src/command/README.md)
  - Interpreter -- 언어의 문법과 해석 방법 [이론](https://blog.naver.com/new_jae_guk/221528121772)
  - Iterator -- 집합 객체 요소들의 접근 방법 및 순회 방법
