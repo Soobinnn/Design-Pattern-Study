@@ -36,7 +36,7 @@
 interface CarElement {
 	void accept(CarElementVisitor visitor); 
 }
-//CarElement 인터페이스는 요소를 정의하는 역할
+// CarElement 인터페이스는 요소를 정의하는 역할
 
 class Car implements CarElement{
     CarElement[] elements;
@@ -58,6 +58,7 @@ class Car implements CarElement{
 }
 // Car 클래스는 CarElement 인터페이스를 확장하여 무인 생성자에서 여러 클래스를 통해 자신을 생성하고 accept함수에서 visitor에게 자신을 구성하는 클래스(데이터)를 리턴해주고 visitor의 기능을 수행한다.
 
+
 class Wheel implements CarElement {
     private String name;
     public Wheel(String name) {
@@ -70,21 +71,23 @@ class Wheel implements CarElement {
         visitor.visit(this);
     }
 }
-//Wheel 클래스는 CarElement 인터페이스를 확장하여 휠의 이름을 뜻하는 name 데이터를 갖고 있고, accept함수에서 visitor의 visit 기능을 수행하는 역하을 하도록 했다.
+// Wheel 클래스는 CarElement 인터페이스를 확장하여 휠의 이름을 뜻하는 name 데이터를 갖고 있고, accept함수에서 visitor의 visit 기능을 수행하는 역하을 하도록 했다.
+
 
 class Body implements CarElement {
     public void accept(CarElementVisitor visitor) {
         visitor.visit(this);
     }
 }
-//Body 클래스는 CarElement 인터페이스를 확장하여 따로 데이터는 생성하지 않았고, accept함수에서 visitor의 visit 기능을 수행하는 역할을 하도록 했다.
+// Body 클래스는 CarElement 인터페이스를 확장하여 따로 데이터는 생성하지 않았고, accept함수에서 visitor의 visit 기능을 수행하는 역할을 하도록 했다.
+
 
 class Engine implements CarElement {
     public void accept(CarElementVisitor visitor) {
         visitor.visit(this);
     }
 }
-//Engine 클래스는 CarElement 인터페이스를 확장하여 따로 데이터는 생성하지 않았고, accept함수에서 visitor에 visitor의 기능을 수행하는 역할을 하도록 했다.
+// Engine 클래스는 CarElement 인터페이스를 확장하여 따로 데이터는 생성하지 않았고, accept함수에서 visitor에 visitor의 기능을 수행하는 역할을 하도록 했다.
 
 
 interface CarElementVisitor {
@@ -110,7 +113,8 @@ class CarElementPrintVisitor implements CarElementVisitor {
         System.out.println("Visiting car");
     }
 }
-//CarElementPrintVisior 클래스는 CarElementVisitor 인터페이스를 확장하여, 각 데이터에 visit 할 시 각 데이터에 대한 print 하는 기능을 한다.
+// CarElementPrintVisior 클래스는 CarElementVisitor 인터페이스를 확장하여, 각 데이터에 visit 할 시 각 데이터에 대한 print 하는 기능을 한다.
+
 
 class CarElementDoVisitor implements CarElementVisitor {
     public void visit(Wheel wheel) {
@@ -126,7 +130,8 @@ class CarElementDoVisitor implements CarElementVisitor {
         System.out.println("Starting my car");
     }
 }
-//CarElementDoVisior 클래스는 CarElementVisitor 인터페이스를 확장하여, 각 데이터에 visit 할 시 각 데이터에 대한 실행하는 기능을 한다. (실제 동작하는 로직은 아니지만 Print 문에서 각 데이터에 대한 기능을 가정하여 명시하였다.)
+// CarElementDoVisior 클래스는 CarElementVisitor 인터페이스를 확장하여, 각 데이터에 visit 할 시 각 데이터에 대한 실행하는 기능을 한다. (실제 동작하는 로직은 아니지만 Print 문에서 각 데이터에 대한 기능을 가정하여 명시하였다.)
+
 
 public class VisitorDemo {
     static public void main(String[] args){
@@ -135,7 +140,7 @@ public class VisitorDemo {
         car.accept(new CarElementDoVisitor());
     }
 }
-//VisitDemo 클래스를 통하여 데이터를 담당하는 Car 클래스를 생성하고, CarElementPrintVistor, CarElementDoVisitor를 통하여 출력, 실행 기능을 하는 코드를 작성하였다.실행 화면
+// VisitDemo 클래스를 통하여 데이터를 담당하는 Car 클래스를 생성하고, CarElementPrintVistor, CarElementDoVisitor를 통하여 출력, 실행 기능을 하는 코드를 작성하였다.실행 화면
 
 Visiting front left wheel
 Visiting front right wheel
@@ -154,7 +159,7 @@ Starting my car
 ```
 
 ### 참고 문헌
-<b>예제 참고</b>
-https://ko.wikipedia.org/wiki/%EB%B9%84%EC%A7%80%ED%84%B0_%ED%8C%A8%ED%84%B4
-https://kunoo.tistory.com/entry/%ED%96%89%EC%9C%84-%ED%8C%A8%ED%84%B4-Visitor-pattern-%EB%B9%84%EC%A7%80%ED%84%B0-%ED%8C%A8%ED%84%B4
-https://blog.hansoolabs.com/564
+
+[https://ko.wikipedia.org/wiki/%EB%B9%84%EC%A7%80%ED%84%B0_%ED%8C%A8%ED%84%B4]
+[https://kunoo.tistory.com/entry/%ED%96%89%EC%9C%84-%ED%8C%A8%ED%84%B4-Visitor-pattern-%EB%B9%84%EC%A7%80%ED%84%B0-%ED%8C%A8%ED%84%B4]
+[https://blog.hansoolabs.com/564]
