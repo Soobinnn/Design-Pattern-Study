@@ -39,7 +39,7 @@
 public abstract class Expression {
 	abstract int Interpreter();
 }
-//해석자의 추상 클래스이며, 연산을 수행할 Interpreter 추상 함수를 갖음
+// 해석자의 추상 클래스이며, 연산을 수행할 Interpreter 추상 함수를 갖음
 
 
 // NonTerminal Expression
@@ -55,7 +55,7 @@ public class Minus extends Expression{
 		return this.leftValue.Interpreter() - this.rightValue.Interpreter();
 	}
 }
-//Minus 연산을 수행할 Minus 클래스, Interpreter 함수는 왼쪽 표현식에서 오른쪽 표현식 감소시키는 역할을 수행
+// Minus 연산을 수행할 Minus 클래스, Interpreter 함수는 왼쪽 표현식에서 오른쪽 표현식 감소시키는 역할을 수행
 
 
 // NonTerminal Expression
@@ -71,7 +71,7 @@ public class Plus extends Expression{
 		return this.leftValue.Interpreter() + this.rightValue.Interpreter();
 	}
 }
-//Plus 연산을 수행할 Plus 클래스, Interpreter 함수는 왼쪽 표현식에서 오른쪽 표현식 증가시키 역할을 수행
+// Plus 연산을 수행할 Plus 클래스, Interpreter 함수는 왼쪽 표현식에서 오른쪽 표현식 증가시키 역할을 수행
 
 
 // Terminal Expression
@@ -85,7 +85,7 @@ public class Value extends Expression{
 		return this.data;
 	}
 }
-//단일 값을 갖는 Value클래스, Interpreter 함수는 자신의 data를 반환
+// 단일 값을 갖는 Value클래스, Interpreter 함수는 자신의 data를 반환
 
 
 import java.util.Stack;
@@ -123,10 +123,8 @@ public class Main {
 		return syntaxTree;
 	}
 }
-//Main 클래스에서는 후위 표기식 "11 7 4 - + 14 -" 을 해석하여 결과값을 돌려줌.
+// Main 클래스에서는 후위 표기식 "11 7 4 - + 14 -" 을 해석하여 결과값을 돌려줌.
 
 ### 참고문헌
-
-<b>예제 참고</b>
 
 [https://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0_%ED%8C%A8%ED%84%B4]
