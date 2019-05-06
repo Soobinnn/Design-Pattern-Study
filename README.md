@@ -5,11 +5,11 @@
 ### - 교재 : GOF의 디자인 패턴
 ### Study Role
   __- 발표 방식__
-  
+
    디자인 패턴 큰 카테고리 (생성패턴, 구조패턴, 행위패턴)별 패턴 1개씩 발표 
-   
+
    2일 공부 후 1일 세미나식으로 진행
-   
+
 ## 디자인 패턴(Desgin Pattern) 이란?
 재사용이 가능한 설계는 선택하고, 재사용을 방해하는 설계를 배제하도록 도와줌   
 
@@ -62,7 +62,7 @@ __- 행동__
 
 ### 생성패턴
  - Abstract Factory -- 제품 객체군 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/abstractFactory/README.md)
- - Builder -- 복합 객체 생성 방법  [이론](http://naver.me/xaFu59WW)
+ - Builder -- 복합 객체 생성 방법  [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/builder/README.md)
  - Factory Method -- 인스턴스화될 객체의 서브클래스 [이론](https://github.com/Soobinnn/Design-Pattern-Study/blob/master/src/factoryMethod/README.md)
  - Prototype -- 인스턴스화될 객체 클래스 [이론](https://blog.naver.com/new_jae_guk/221521427632)
  - Singleton -- 클래스의 인스턴스가 하나일 때 [이론](https://develop-im.tistory.com/45) 
