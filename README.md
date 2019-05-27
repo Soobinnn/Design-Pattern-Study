@@ -95,3 +95,5 @@ __- 행동__
 * 복합체(Composite)는 반복자(Iterator), 방문자(Visitor)를 함께 사용해야할 때가 많음.
 * 원형(Prototype)  은 추상 팩토리 패턴(Abstract Factory)의 대안 패턴
 * 복합체(Composite)는 장식자(Decorator)와 의도는 다르지만 구조는 매우 비슷함.
+
+** Adapter, Proxy, Bridge 패턴은 독립적인 관계
